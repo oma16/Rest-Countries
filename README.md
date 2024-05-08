@@ -33,10 +33,10 @@ Users should be able to:
 
 ### Screenshot
 
-![webscreendark](./webscreendark)
-![webscreendark](./webscreenlight)
-![webscreendark](./mobscreendark)
-![webscreendark](./mobscreenlight)
+![webscreendark](./public/webscreendark.png)
+![webscreenlight](./public/webscreenlight.png)
+![mobscreendark](./public/mobscreendark.png)
+![mobscreenlight](./public/mobscreenlight.png)
 
 
 
