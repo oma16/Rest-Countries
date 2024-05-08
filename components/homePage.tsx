@@ -4,6 +4,8 @@ import {  useContext } from "react";
 import { ThemeContext } from "./../components/pageLayout";
 import SearchAndFilter from "@/components/searchAndFilter/searchAndFilter";
 import Link from "next/link";
+import LazyLoad from 'react-lazy-load';
+
 
 const CountryData = require("country-data-list").countries;
 
@@ -56,6 +58,7 @@ export default function HomePage() {
                 key={index}
               >
                 <div className="w-full h-36 rounded-tr-lg rounded-tl-lg">
+                  <LazyLoad>
                   <Image
                     src={country?.flags?.svg}
                     alt={country?.flags?.alt || "flag"}
@@ -64,6 +67,7 @@ export default function HomePage() {
                     priority
                     className="w-full h-36 rounded-tr-lg rounded-tl-lg object-cover"
                   />
+                  </LazyLoad>
                 </div>
                 <div className="px-5">
                   <p className="font-extrabold text-xl my-3 font-nunito">

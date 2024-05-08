@@ -5,6 +5,7 @@ import Link from "next/link";
 import arrowlight from "./../public/arrowlight.svg";
 import arrowdark from "./../public/arrowdark.svg";
 import Image from "next/image";
+import LazyLoad from "react-lazy-load";
 
 
 const CountryData = require("country-data-list").countries;
@@ -59,7 +60,7 @@ const CountryDetailsPage = ({ params: { id } }: Props) => {
       
         {!loading ? (
           <div className="grid grid-cols-1 lg:grid-cols-2 mt-8  lg:gap-16">
-          <div className="">
+          <LazyLoad>
             <Image
               src={singleCountry?.flags?.svg}
               alt={singleCountry?.flags?.alt || "flag"}
@@ -68,7 +69,7 @@ const CountryDetailsPage = ({ params: { id } }: Props) => {
               className="w-full h-52 md:h-80 xl:h-96  object-cover shadow-lg "
               priority
             />
-          </div>
+          </LazyLoad>
 
           <div className="mt-5">
             <div>
