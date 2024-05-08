@@ -33,10 +33,10 @@ Users should be able to:
 
 ### Screenshot
 
-![](./webscreendark)
-![](./webscreenlight)
-![](./mobscreendark)
-![](./mobscreenlight)
+![webscreendark](./webscreendark)
+![webscreendark](./webscreenlight)
+![webscreendark](./mobscreendark)
+![webscreendark](./mobscreenlight)
 
 
 
@@ -70,7 +70,7 @@ I learnt Hooks such as useState, UseEffect, UseContext and how they are used , l
 
 I will like to learn how localStorage is being used very well
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+
 
 ### Useful resources
 
