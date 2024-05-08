@@ -66,9 +66,7 @@ export default function PageLayout({
   const [mode, setMode] = useState( 'light');
   const baseUrl = "https://restcountries.com/v3.1/all";
   
-  // useEffect(()=>{
-  //   localStorage.setItem("theme", mode);
-  // },[mode])
+  
 useEffect(() => {
   
   const fetchedData = async() =>{
@@ -77,14 +75,14 @@ useEffect(() => {
       axios.get(baseUrl).then((res) => {
         setCountries(res.data);
         setRegion(res.data);
-        
+        setLoading(false);
       });
       
     } catch (error:any) {
       setError(error);
       
     }
-    setLoading(false);
+   
   }
   fetchedData();
  

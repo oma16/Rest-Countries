@@ -42,7 +42,7 @@ export default function HomePage() {
                 ? 1
                 : 0
             )
-            ?.slice(0,8).map((country: any, index: number) => (
+            ?.map((country: any, index: number) => (
               <Link
                 href={`/country/${CountryData[`${country.cca2}`]?.name?.replace(
                   /[,\s]+/g,
@@ -92,7 +92,7 @@ export default function HomePage() {
             ))}
         </div>
       ) : (
-        <div className="md:px-16">Loading...</div>
+        <div className="px-5 md:px-16">Loading...</div>
       )}
     </div>
   );
