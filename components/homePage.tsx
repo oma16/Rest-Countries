@@ -51,7 +51,7 @@ export default function HomePage() {
                   ""
                 )}`}
                 className={
-                  mode
+                  mode === "dark"
                     ? "cursor-pointer w-64 h-80 md:w-72 lg:w-64 shadow-xl pb-10 darkElement mx-auto rounded-lg"
                     : "cursor-pointer w-64 h-80 mx-auto md:w-72 lg:w-64 shadow-xl pb-10 lightElement rounded-lg"
                 }

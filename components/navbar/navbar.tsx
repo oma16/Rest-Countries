@@ -8,7 +8,7 @@ const Navbar = () => {
   const { mode, setMode }:any = useContext(ThemeContext);
 
   const toggleMode = () =>{
-    const newTheme = mode === 'light' ? "dark" :"light"
+    const newTheme = mode === 'light'  ? "dark" :"light"
     setMode(newTheme) }
 
   
@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <div
       className={
-        mode === "light"
+        mode === "dark"
           ? "darkElement flex justify-between px-5 md:px-16 py-5 shadow-xl"
           : "lightElement flex justify-between px-5 md:px-16 py-5 shadow-xl"
       }
@@ -26,12 +26,12 @@ const Navbar = () => {
       <h1 className="font-semibold md:font-extrabold text-base md:text-2xl">Where in the world?</h1>
       <div>
         <div
-          onClick={() => setMode(!mode)}
-          className={mode === "light" ? "darkElement flex cursor-pointer " : "lightElement hidden"}
+          onClick={toggleMode}
+          className={mode === "dark" ? "darkElement hidden cursor-pointer " : "lightElement flex cursor-pointer"}
         >
           <Image
-            src={darkmode}
-            alt="Dark mode"
+            src={lightmode}
+            alt="Light mode"
             width={20}
             height={20}
             className="mr-1"
@@ -41,11 +41,11 @@ const Navbar = () => {
         </div>
         <div
           onClick={toggleMode}
-          className={mode === "light" ? "darkElement hidden" : "lightElement flex cursor-pointer"}
+          className={mode === "dark" ? "darkElement flex cursor-pointer" : "lightElement hidden cursor-pointer"}
         >
           <Image
-            src={lightmode}
-            alt="light mode"
+            src={darkmode}
+            alt="Dark mode"
             width={20}
             height={20}
             className="mr-1"

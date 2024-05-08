@@ -91,7 +91,7 @@ useEffect(() => {
   return (
     <ThemeContext.Provider value={{ mode, setMode, countries,setCountries ,region, setRegion, loading, setLoading}}>
       <html lang="en" className={`${inter.variable} ${nunito.variable}`}>
-        <body  className={`${mode === "light" ? "dark w-full h-full" : "light w-full h-full"} ${nunito.className}`}>
+        <body  className={`${mode === "dark" ? "dark w-full h-full" : "light w-full h-full"} ${nunito.className}`}>
           <Navbar />
           {children}
         </body>

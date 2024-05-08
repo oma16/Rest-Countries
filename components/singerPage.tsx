@@ -31,7 +31,7 @@ const CountryDetailsPage = ({ params: { id } }: Props) => {
         <button
           type="button"
           className={
-            mode
+            mode === "dark"
               ? "darkElement py-3 px-8 rounded-lg my-5 shadow-xl"
               : "lightElement py-3 px-8 rounded-lg my-5  shadow-xl"
           }
@@ -43,14 +43,14 @@ const CountryDetailsPage = ({ params: { id } }: Props) => {
                 alt="Dark mode"
                 width={22}
                 height={10}
-                className={mode === "light" ? " hidden " : "flex"}
+                className={mode === "dark" ? " hidden " : "flex"}
               />
               <Image
                 src={arrowdark}
                 alt="light mode"
                 width={22}
                 height={10}
-                className={mode === "light" ? " flex " : "hidden"}
+                className={mode === "dark" ? " flex " : "hidden"}
               />
             </div>
             <p> Back</p>
@@ -186,7 +186,7 @@ const CountryDetailsPage = ({ params: { id } }: Props) => {
                             <button
                               type="button"
                               className={
-                                mode
+                                mode ==="dark"
                                   ? "darkElement py-2 px-3 rounded-lg  mr-2 mb-2 shadow-xl"
                                   : "lightElement py-2 px-3 rounded-lg  mr-2 mb-2 shadow-xl"
                               }

@@ -52,7 +52,7 @@ const SearchAndFilter = ({
             id="search"
             placeholder="Search for a country..."
             className={
-              mode === "light"
+              mode === "dark"
                 ? "darkElement searchdark  px-5 py-3 w-full md:w-3/4  lg:w-1/2 mb-3 md:mb-0 rounded-lg focus:outline-0 cursor-pointer shadow-xl"
                 : "lightElement searchlight px-5 py-3 w-full md:w-3/4  lg:w-1/2 mb-3 md:mb-0 rounded-lg focus:outline-0 cursor-pointer shadow-xl"
             }
@@ -61,7 +61,7 @@ const SearchAndFilter = ({
         </div>
         <div
           className={
-            mode === "light"
+            mode === "dark"
               ? "darkElement pr-3 rounded-lg focus:outline-0 w-3/4 md:w-1/2 lg:w-1/3 xl:w-1/4 shadow-xl"
               : "lightElement pr-3 rounded-lg focus:outline-0 w-3/4 md:w-1/2 lg:w-1/3 xl:w-1/4 shadow-xl"
           }
@@ -70,7 +70,7 @@ const SearchAndFilter = ({
             name="select"
             id="select"
             className={
-              mode === "light"
+              mode === "dark"
                 ? "darkElement px-5 py-3 rounded-lg focus:outline-0 w-full cursor-pointer"
                 : "lightElement px-5 py-3 rounded-lg focus:outline-0 w-full cursor-pointer"
             }
@@ -79,7 +79,7 @@ const SearchAndFilter = ({
             <option
               value=""
               className={
-                mode === "light"
+                mode === "dark"
                   ? "darkElement px-5 py-3  cursor-pointer"
                   : "lightElement px-5 py-3 cursor-pointer"
               }
@@ -89,7 +89,7 @@ const SearchAndFilter = ({
             <option
               value="africa"
               className={
-                mode === "light"
+                mode === "dark"
                   ? "darkElement px-5 py-3  cursor-pointer"
                   : "lightElement px-5 py-3  cursor-pointer"
               }
@@ -99,7 +99,7 @@ const SearchAndFilter = ({
             <option
               value="americas"
               className={
-                mode === "light"
+                mode === "dark"
                   ? "darkElement px-5 py-3  cursor-pointer"
                   : "lightElement px-5 py-3 cursor-pointer"
               }
@@ -109,7 +109,7 @@ const SearchAndFilter = ({
             <option
               value="asia"
               className={
-                mode === "light"
+                mode === "dark"
                   ? "darkElement px-5 py-3 cursor-pointer"
                   : "lightElement px-5 py-3  cursor-pointer"
               }
@@ -119,7 +119,7 @@ const SearchAndFilter = ({
             <option
               value="europe"
               className={
-                mode === "light"
+                mode === "dark"
                   ? "darkElement px-5 py-3  cursor-pointer"
                   : "lightElement px-5 py-3  cursor-pointer"
               }
@@ -129,7 +129,7 @@ const SearchAndFilter = ({
             <option
               value="oceania"
               className={
-                mode === "light"
+                mode === "dark"
                   ? "darkElement px-5 py-3  cursor-pointer"
                   : "lightElement px-5 py-3  cursor-pointer"
               }
