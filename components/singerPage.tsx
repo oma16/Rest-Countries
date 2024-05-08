@@ -165,9 +165,9 @@ const CountryDetailsPage = ({ params: { id } }: Props) => {
             </div>
             <div className="w-full flex flex-col md:flex-row mt-10 mb-20 ">
               {singleCountry && singleCountry?.borders ? (
-                <p className="mr-1 md:w-1/4 md:self-center font-extrabold mb-3 md:mb-0 text-base">
+                <span className="mr-1 md:w-1/4 md:self-center font-extrabold mb-3 md:mb-0 text-base">
                   Border Countries:
-                </p>
+                </span>
               ) : (
                 ""
               )}
