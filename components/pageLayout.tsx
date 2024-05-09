@@ -61,13 +61,12 @@ export default function PageLayout({
   const [region, setRegion] = useState<Country[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const saveTheme = localStorage.getItem('mode')
-  const [mode, setMode] = useState(saveTheme || 'light');
+  const [mode, setMode] = useState("light");
   const baseUrl = "https://restcountries.com/v3.1/all";
   
   
 useEffect(() => {
-  
+  setMode(localStorage.getItem('mode') || mode)
   const fetchedData = async() =>{
     setLoading(true)
     try {
@@ -86,7 +85,7 @@ useEffect(() => {
   fetchedData();
  
   
-}, []);
+}, [mode]);
   return (
     <ThemeContext.Provider value={{ mode, setMode, countries,setCountries ,region, setRegion, loading, setLoading}}>
       <html lang="en" className={`${inter.variable} ${nunito.variable}`}>

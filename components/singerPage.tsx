@@ -202,7 +202,11 @@ const CountryDetailsPage = ({ params: { id } }: Props) => {
             </div>
           </div>
         </div>
-        ) : (<div>Loading...</div>)}
+        ) : (<div className={
+          mode === "dark"
+            ? "dark text-lg"
+            : "light text-lg"
+        }>Loading...</div>)}
       
     </div>
   );

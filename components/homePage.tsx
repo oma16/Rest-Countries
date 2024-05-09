@@ -1,11 +1,10 @@
 "use client";
 import Image from "next/image";
-import {  useContext } from "react";
+import { useContext } from "react";
 import { ThemeContext } from "./../components/pageLayout";
 import SearchAndFilter from "@/components/searchAndFilter/searchAndFilter";
 import Link from "next/link";
-import LazyLoad from 'react-lazy-load';
-
+import LazyLoad from "react-lazy-load";
 
 const CountryData = require("country-data-list").countries;
 
@@ -22,7 +21,7 @@ export default function HomePage() {
   }: any = useContext(ThemeContext);
 
   return (
-    <div className="">
+    <div className={mode === "dark" ? "dark " : "light"}>
       <SearchAndFilter
         countries={countries}
         setCountries={setCountries}
@@ -59,14 +58,14 @@ export default function HomePage() {
               >
                 <div className="w-full h-36 rounded-tr-lg rounded-tl-lg">
                   <LazyLoad>
-                  <Image
-                    src={country?.flags?.svg}
-                    alt={country?.flags?.alt || "flag"}
-                    width={10}
-                    height={10}
-                    priority
-                    className="w-full h-36 rounded-tr-lg rounded-tl-lg object-cover"
-                  />
+                    <Image
+                      src={country?.flags?.svg}
+                      alt={country?.flags?.alt || "flag"}
+                      width={10}
+                      height={10}
+                      priority
+                      className="w-full h-36 rounded-tr-lg rounded-tl-lg object-cover"
+                    />
                   </LazyLoad>
                 </div>
                 <div className="px-5">
@@ -96,7 +95,15 @@ export default function HomePage() {
             ))}
         </div>
       ) : (
-        <div className="px-5 md:px-16">Loading...</div>
+        <div
+          className={
+            mode === "dark"
+              ? "dark  px-5 md:px-16 text-lg"
+              : "light  px-5 md:px-16 text-lg"
+          }
+        >
+          Loading...
+        </div>
       )}
     </div>
   );
