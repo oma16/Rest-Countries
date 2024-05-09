@@ -61,7 +61,7 @@ export default function PageLayout({
   const [region, setRegion] = useState<Country[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const saveTheme = window.localStorage.getItem('mode')
+  const saveTheme = localStorage.getItem('mode')
   const [mode, setMode] = useState(saveTheme || 'light');
   const baseUrl = "https://restcountries.com/v3.1/all";
   
