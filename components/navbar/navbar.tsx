@@ -9,7 +9,9 @@ const Navbar = () => {
 
   const toggleMode = () =>{
     const newTheme = mode === 'light'  ? "dark" :"light"
-    setMode(newTheme) }
+    setMode(newTheme)
+    window.localStorage.setItem("mode", newTheme)
+   }
 
   
 

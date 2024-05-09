@@ -59,14 +59,14 @@ const CountryDetailsPage = ({ params: { id } }: Props) => {
       </Link>
       
         {!loading ? (
-          <div className="grid grid-cols-1 lg:grid-cols-2 mt-8  lg:gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 mt-8  lg:gap-12">
           
             <Image
               src={singleCountry?.flags?.svg}
               alt={singleCountry?.flags?.alt || "flag"}
               width={100}
               height={100}
-              className="w-full h-52 md:h-80 xl:h-96  object-cover shadow-lg "
+              className="w-full xl:w-11/12 h-52 md:h-80 xl:h-96  object-cover shadow-lg "
               priority
             />
           
@@ -163,15 +163,15 @@ const CountryDetailsPage = ({ params: { id } }: Props) => {
                 </div>
               </div>
             </div>
-            <div className="w-full flex flex-col md:flex-row mt-10 mb-20 ">
+            <div className="w-full flex flex-col md:flex-row mt-10 mb-20">
               {singleCountry && singleCountry?.borders ? (
-                <span className="mr-1 md:w-1/4 md:self-center font-extrabold mb-3 md:mb-0 text-base">
+                <span className="mr-2 md:w-1/4 md:self-center font-extrabold mb-3 md:mb-0 text-base">
                   Border Countries:
                 </span>
               ) : (
                 ""
               )}
-              <div className="flex  md:w-3/4  flex-wrap">
+              <div className="flex  md:w-3/4 flex-wrap">
                 {singleCountry
                   ? singleCountry?.borders?.map(
                       (border: any, index: number) => (
@@ -187,8 +187,8 @@ const CountryDetailsPage = ({ params: { id } }: Props) => {
                               type="button"
                               className={
                                 mode ==="dark"
-                                  ? "darkElement py-2 px-2 rounded-lg  mr-2 mb-2 shadow-xl"
-                                  : "lightElement py-2 px-2 rounded-lg  mr-2 mb-2 shadow-xl"
+                                  ? "darkElement py-2 px-3 rounded-lg  mr-2 mb-2 shadow-xl"
+                                  : "lightElement py-2 px-3 rounded-lg  mr-2 mb-2 shadow-xl"
                               }
                             >
                               {CountryData[`${border}`]?.name}

@@ -1,7 +1,5 @@
 "use client";
 import Navbar from "@/components/navbar/navbar";
-// import "./globals.css";
-import type { Metadata } from "next";
 import { Inter,Nunito } from "next/font/google";
 import React, { createContext, useEffect, useState } from "react";
 import axios from "axios";
@@ -63,7 +61,8 @@ export default function PageLayout({
   const [region, setRegion] = useState<Country[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [mode, setMode] = useState( 'light');
+  const saveTheme = window.localStorage.getItem('mode')
+  const [mode, setMode] = useState(saveTheme || 'light');
   const baseUrl = "https://restcountries.com/v3.1/all";
   
   
