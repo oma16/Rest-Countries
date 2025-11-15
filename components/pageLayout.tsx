@@ -62,7 +62,7 @@ export default function PageLayout({
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [mode, setMode] = useState("light");
-  const baseUrl = "https://restcountries.com/v3.1/all";
+  const baseUrl = "https://restcountries.com/v3.1/all?fields=name,capital,flags,population,region,cca2,tld,currencies,languages,subregion";
   
   
 useEffect(() => {
@@ -72,7 +72,8 @@ useEffect(() => {
     try {
      await axios.get(baseUrl).then((res) => {
         setCountries(res.data);
-        setRegion(res.data);
+       setRegion(res.data);
+       console.log(countries)
         setLoading(false);
       });
       
