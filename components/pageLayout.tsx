@@ -72,8 +72,7 @@ useEffect(() => {
     try {
      await axios.get(baseUrl).then((res) => {
         setCountries(res.data);
-       setRegion(res.data);
-       console.log(countries)
+        setRegion(res.data);
         setLoading(false);
       });
       
